@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: factory-method-deb
-          path: Catalog/Factory/easy/code/build/factory-method-app_1.0.0_amd64.deb
+          path: Catalog/Factory/easy/code/build/factory-method-app-1.0.0-Linux.deb
 
   release:
     needs: build_test_package
