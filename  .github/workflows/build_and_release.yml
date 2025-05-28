@@ -38,11 +38,13 @@ jobs:
           ctest --output-on-failure
 
       - name: Build deb package
+        if: startsWith(github.ref, 'refs/tags/v')
         run: |
           cd Catalog/Factory/easy/code/build
           make package
 
       - name: Upload .deb artifact
+        if: startsWith(github.ref, 'refs/tags/v')
         uses: actions/upload-artifact@v3
         with:
           name: factory-method-deb
