@@ -40,7 +40,7 @@ jobs:
       - name: Build deb package
         run: |
           cd Catalog/Factory/easy/code/build
-          make package
+          CPACK_GENERATOR="DEB" make package
 
       - name: Upload .deb artifact
         uses: actions/upload-artifact@v4
