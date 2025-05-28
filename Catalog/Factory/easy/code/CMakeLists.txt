@@ -34,10 +34,11 @@ foreach(test_src ${TEST_SOURCES})
     add_test(NAME ${test_name} COMMAND ${test_name})
 endforeach()
 
-include(CPack)
 set(CPACK_PACKAGE_NAME "factory-method-app")
 set(CPACK_PACKAGE_VERSION "1.0.0")
 set(CPACK_GENERATOR "DEB")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Игнат Ващило")
 set(CPACK_PACKAGE_CONTACT "ignatvaschilo@yandex.ru")
 set(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6 (>= 2.7)")
+
+include(CPack)
