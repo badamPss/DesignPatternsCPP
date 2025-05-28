@@ -1,0 +1,12 @@
+/Users/ignatvaschilo/badamPss/workspace/projects/rk/Catalog/Factory/easy/code/build/CMakeFiles/factory.dir
+/Users/ignatvaschilo/badamPss/workspace/projects/rk/Catalog/Factory/easy/code/build/CMakeFiles/main_exec.dir
+/Users/ignatvaschilo/badamPss/workspace/projects/rk/Catalog/Factory/easy/code/build/CMakeFiles/test_concrete_product1.dir
+/Users/ignatvaschilo/badamPss/workspace/projects/rk/Catalog/Factory/easy/code/build/CMakeFiles/test_concrete_product2.dir
+/Users/ignatvaschilo/badamPss/workspace/projects/rk/Catalog/Factory/easy/code/build/CMakeFiles/test_creator1.dir
+/Users/ignatvaschilo/badamPss/workspace/projects/rk/Catalog/Factory/easy/code/build/CMakeFiles/test_creator2.dir
+/Users/ignatvaschilo/badamPss/workspace/projects/rk/Catalog/Factory/easy/code/build/CMakeFiles/test_some_operation.dir
+/Users/ignatvaschilo/badamPss/workspace/projects/rk/Catalog/Factory/easy/code/build/CMakeFiles/package.dir
+/Users/ignatvaschilo/badamPss/workspace/projects/rk/Catalog/Factory/easy/code/build/CMakeFiles/package_source.dir
+/Users/ignatvaschilo/badamPss/workspace/projects/rk/Catalog/Factory/easy/code/build/CMakeFiles/test.dir
+/Users/ignatvaschilo/badamPss/workspace/projects/rk/Catalog/Factory/easy/code/build/CMakeFiles/edit_cache.dir
+/Users/ignatvaschilo/badamPss/workspace/projects/rk/Catalog/Factory/easy/code/build/CMakeFiles/rebuild_cache.dir
