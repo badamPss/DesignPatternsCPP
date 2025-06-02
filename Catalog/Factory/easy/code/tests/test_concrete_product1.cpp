@@ -1,8 +1,9 @@
 #include "../include/product.h"
-#include <cassert>
+#include <gtest/gtest.h>
 
-int main() {
+TEST(ConcreteProduct1Test, OperationReturnsCorrectString) {
 	ConcreteProduct1 p;
-	assert(p.Operation() == "{Result of the ConcreteProduct1}");
-	return 0;
+	EXPECT_EQ(p.Operation(), "{Result of the ConcreteProduct1}");
 }
+
+// Не нужен main(), так как gtest_main предоставляет его

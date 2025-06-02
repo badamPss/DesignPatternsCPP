@@ -1,10 +1,8 @@
 #include "../include/creator.h"
-#include <cassert>
+#include <gtest/gtest.h>
 
-int main() {
+TEST(ConcreteCreator1Test, FactoryMethodCreatesCorrectProduct) {
 	ConcreteCreator1 c;
-	Product* p = c.FactoryMethod();
-	assert(p->Operation() == "{Result of the ConcreteProduct1}");
-	delete p;
-	return 0;
+	std::unique_ptr<Product> p(c.FactoryMethod());
+	EXPECT_EQ(p->Operation(), "{Result of the ConcreteProduct1}");
 }

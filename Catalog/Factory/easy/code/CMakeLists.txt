@@ -4,7 +4,15 @@ project(FactoryMethod LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+include(FetchContent)
+FetchContent_Declare(
+    googletest
+    GIT_REPOSITORY https://github.com/google/googletest.git
+    GIT_TAG release-1.12.1
+)
+FetchContent_MakeAvailable(googletest)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include ${gtest_SOURCE_DIR}/include)
 
 add_library(factory STATIC
         src/creator.cpp
@@ -30,7 +38,7 @@ set(TEST_SOURCES
 foreach(test_src ${TEST_SOURCES})
     get_filename_component(test_name ${test_src} NAME_WE)
     add_executable(${test_name} ${test_src})
-    target_link_libraries(${test_name} factory)
+    target_link_libraries(${test_name} factory gtest gtest_main)
     add_test(NAME ${test_name} COMMAND ${test_name})
 endforeach()
 
@@ -39,6 +47,6 @@ set(CPACK_PACKAGE_VERSION "1.0.0")
 set(CPACK_GENERATOR "DEB")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Игнат Ващило")
 set(CPACK_PACKAGE_CONTACT "ignatvaschilo@yandex.ru")
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6 (>= 2.7)")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6 (>= 2.7), libgtest-dev")
 
 include(CPack)

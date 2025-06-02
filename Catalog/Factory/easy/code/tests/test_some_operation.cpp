@@ -1,10 +1,9 @@
 #include "../include/creator.h"
-#include <cassert>
+#include <gtest/gtest.h>
 #include <string>
 
-int main() {
+TEST(ConcreteCreator1Test, SomeOperationContainsProductName) {
 	ConcreteCreator1 c;
 	std::string result = c.SomeOperation();
-	assert(result.find("ConcreteProduct1") != std::string::npos);
-	return 0;
+	EXPECT_TRUE(result.find("ConcreteProduct1") != std::string::npos);
 }

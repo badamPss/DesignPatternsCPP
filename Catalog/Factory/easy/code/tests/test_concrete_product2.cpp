@@ -1,8 +1,7 @@
 #include "../include/product.h"
-#include <cassert>
+#include <gtest/gtest.h>
 
-int main() {
+TEST(ConcreteProduct2Test, OperationReturnsCorrectString) {
 	ConcreteProduct2 p;
-	assert(p.Operation() == "{Result of the ConcreteProduct2}");
-	return 0;
+	EXPECT_EQ(p.Operation(), "{Result of the ConcreteProduct2}");
 }
